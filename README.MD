@@ -17,7 +17,7 @@ npm i react-router
 ### Install GSAP
 
 ```bash
-npm install gsap
+npm install gsap @gsap/react
 ```
 
 ### Install Tailwind CSS via
