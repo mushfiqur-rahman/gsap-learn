@@ -1,8 +1,32 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router";
+
+import {
+  GsapTo,
+  GsapFrom,
+  GsapFromTo,
+  GsapTimeline,
+  GsapStagger,
+  GsapScrollTrigger,
+  GsapText,
+  Home,
+} from "./pages";
+
 function App() {
   return (
     <>
-      <div>
-        <h2 className="text-7xl text-green-500 font-bold">Hello GSAP!</h2>
+      <div className="bg-black min-h-screen w-full">
+        <Router>
+          <Routes>
+            <Route path="/gsapto" element={<GsapTo />} />
+            <Route path="/gsapfrom" element={<GsapFrom />} />
+            <Route path="/gsapfromto" element={<GsapFromTo />} />
+            <Route path="/gsaptimeline" element={<GsapTimeline />} />
+            <Route path="/gsapstagger" element={<GsapStagger />} />
+            <Route path="/gsapscrolltrigger" element={<GsapScrollTrigger />} />
+            <Route path="/gsaptext" element={<GsapText />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Router>
       </div>
     </>
   );
